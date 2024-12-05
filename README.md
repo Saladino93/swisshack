@@ -1,25 +1,47 @@
-# Repository for AI4Phys hackathon
+# Repository for Swiss Cosmo Hackathon
 
-Below organization details, data access, and group splitting.
+Below organization details and data access.
 
 **Many thanks to everyone who contributed data and code for this hack!**
 
+Credits to most of the repo goes to people including *Leander Thiele*.
 
 ## Organization
 
-Hacks Mon & Tue 10.15-16.45, optionally Wed afternoon.
-Note: Tue at [U-Tokyo DLX Design Lab](https://www.google.com/maps/place/U-Tokyo+DLX+Design+Lab+-+Kashiwa/@35.8935037,139.9432189,17z/data=!3m1!4b1!4m6!3m5!1s0x60189d08be0138ad:0x711bcecd5a9d7c9e!8m2!3d35.8934994!4d139.9457938!16s%2Fg%2F11ryljy207?entry=ttu).
-Hack summary Fri 16.15-16.45.
+See here: https://saladino93.github.io/hackathon_unige_2024.html
 
-At IPMU, we have the main lecture theatre
-as well as seminar rooms B (1F), C (3F), and 3F open space.
+## Link for presentation slides
+
+https://docs.google.com/presentation/d/1s_ES1H8186SfwJQ613htYLa7YLM8h5aeZ2etjwNion0/edit?usp=sharing
 
 
 ## Using the data
 
+Here is a potential list of data sources you can use (but you can use whatever suits you).
+
+You might want to use Google Colab and Google Drive to ease sharing data and code with your teammates.
+
+### Data 
+
+* Preliminary Uchuu simulation (credits *Riccardo Seppi*), https://drive.proton.me/urls/YNNYYCCJ74#9XTtQrgJmRBo
+* Planck Legacy Archive, https://pla.esac.esa.int/#home
+* Planck PR4 CMB maps, https://data.cmb-s4.org/planck_pr4.html
+* Planck CMB lensing maps, https://github.com/carronj/planck_PR4_lensing
+* DES Y3 data, https://des.ncsa.illinois.edu/
+* eRosita DR1, https://erosita.mpe.mpg.de/dr1/
+* DESI Early Data Release, https://data.desi.lbl.gov/doc/
+* Camels simulations, https://camels.readthedocs.io/en/latest/ 
+* Websky simulations, https://mocks.cita.utoronto.ca/data/websky/v0.0/
+* Half Dome simulations, https://halfdomesims.github.io/
+* Quijote simulations, https://quijote-simulations.readthedocs.io/en/latest/index.html
+
+
+### Data 
+
 Data accessible in the [Google drive](https://drive.google.com/drive/u/1/folders/13ySEme-B8XDMYgTZ8_rVpMarRUUGYbTw).
 
-We suggest you use Google colab for the hack. 
+We suggest you use Google colab for the hack, but you decide your best way to work.
+
 It is most straightforward to directly work with the above Google drive from colab,
 since the files don't need to leave Google's servers in that case.
 The way I figured out how to do this is as follows (there might be a better method):
@@ -36,181 +58,45 @@ The way I figured out how to do this is as follows (there might be a better meth
 
 ## Available data sets
 
-1. **SDSS spectra** (thanks to *Hideki Tanimura*)  
+* **SDSS spectra** (thanks to *Hideki Tanimura*)  
    Some galaxy spectra from the Sloan Digital Sky Survey.  
    loading: [Read\_sdss.ipynb](Read_sdss.ipynb)  
    data: ``sdss_galaxy_spec.hdf5``
-2. **Gaia** (thanks to *Hideki Tanimura*)  
+* **Gaia** (thanks to *Hideki Tanimura*)  
    Spectra from the Gaia satellite.  
    loading: [Read\_gaia.ipynb](Read_gaia.ipynb)  
    data: ``gaia_star_spec.hdf5``
-3. **HSC Y1 convergence maps and summary statistics** (thanks to *Joaquin Armijo*)  
+* **HSC Y1 convergence maps and summary statistics** (thanks to *Joaquin Armijo*)  
    Real and simulated weak lensing convergence maps for HSC Y1.  
    Also available are some summary statistics for these maps.  
    [Marques et al 2023](https://ui.adsabs.harvard.edu/abs/2024MNRAS.tmp...91M/abstract)  
    loading: [HSC\_NG\_ConvergenceMaps.ipynb](HSC_NG_ConvergenceMaps.ipynb)  
    data: ``HSC_NG/``
-4. **JWST COSMOS web galaxy images** (thanks to *Xuheng Ding*)  
+* **JWST COSMOS web galaxy images** (thanks to *Xuheng Ding*)  
    A sample of galaxy images from JWST.  
    loading: [read\_data\_jwst\_cosmos\_web.py](read_data_jwst_cosmos_web.py)  
    data: ``COSMOS_web_galaxies.zip``
-5. **HSC images** (thanks to *Chris Nagele*)  
+* **HSC images** (thanks to *Chris Nagele*)  
    A sample of galaxy images from HSC.  
    [Nagele et al 2023](https://ui.adsabs.harvard.edu/abs/2023ApJ...947...30N/abstract)  
    loading: [QSO\_SFG\_example.py](QSO_SFG_example.py)  
    data: ``QSO_SFG_data.npy``
-6. **SIMBIG galaxy catalogs** (thanks to *Bruno Regaldo*)  
+* **SIMBIG galaxy catalogs** (thanks to *Bruno Regaldo*)  
    Real and simulated data for SDSS BOSS.  
    Note that the files require [nbodykit](https://nbodykit.readthedocs.io) and [bigfile](https://github.com/rainwoodman/bigfile).  
    [Hahn et al 2023a](https://ui.adsabs.harvard.edu/abs/2023PNAS..12018810H/abstract),
    [Hahn et al 2023b](https://ui.adsabs.harvard.edu/abs/2023JCAP...04..010H/abstract)  
    loading: [simbig\_code/](simbig_code)  
    data: ``simbig_sample.zip``
-7. **CAMELS 2D multifield data** (thanks to *Francisco Villaescusa-Navarro*)  
+* **CAMELS 2D multifield data** (thanks to *Francisco Villaescusa-Navarro*)  
    Images of 25 Mpc/h simulated boxes from the [CAMELS](https://camels.readthedocs.io) project.  
    [data website](https://camels-multifield-dataset.readthedocs.io),
    [Villaescusa-Navarro et al 2022](https://ui.adsabs.harvard.edu/abs/2022ApJS..259...61V/abstract)  
    loading: [read\_camels.py](read_camels.py)  
    data: ``CAMELS_multifield``
-8. **Effective training and upscaling LLMs** (thanks to *Chanjun Park*)  
+* **Effective training and upscaling LLMs** (thanks to *Chanjun Park*)  
    This is a special topic run by Chanjun Park.  
    [model on huggingface](https://huggingface.co/upstage/SOLAR-10.7B-v1.0)
-9. **LLM applied to astro papers** (thanks to *Adam Zadrozny*)  
+* **LLM applied to astro papers** (thanks to *Adam Zadrozny*)  
    Use LLM to extract knowledge from the astro literature.  
    data & code: ``Astro_Papers/``
-
-
-## Hack groups
-
-Please find group assignment below.
-For each group, we suggest you work on one out of three data sets
-(this is to encourage some variety in the topics people choose).
-If you absolutely want to work on a data set that is not listed, this is a free country.
-
-
-### Group A
-suggested topics: SDSS spectra (1), Gaia (2), SIMBIG (6)
-- Tochon, Guillaume
-- Tanimura, Hideki 
-- Ohana, Ruben     
-- Leyde, Konstantin
-- Dixit, Vaibhav   
-- Li, Zhuohan      
-
-### Group B
-suggested topics: Gaia (2), HSC images (5), Astro papers LLM (9)
-- Zadrożny, Adam  
-- Golkar, Siavash 
-- Novaes, Camila  
-- Tanaka, Takumi  
-- Alexandre, Adam 
-- Hehir, Thomas   
-
-### Group C
-suggested topics: Gaia (2), HSC convergence (3), LLMs (8)
-- Shirley, Ho              
-- Fromenteau, Sébastien    
-- Perez Diaz, Victor Samuel
-- Horowitz, Benjamin       
-- Craigie, Matt            
-- Adrián, Gutiérrez Adame  
-- Rukundo Benjamin         
-
-### Group D
-suggested topics: Gaia (2), JWST images (4), CAMELS multifield (7)
-- Hotokezaka, Kenta    
-- Eickenberg, Michael  
-- Pettee, Mariel       
-- Ferrero, Ismael      
-- Tokiwa, Akira        
-- Park, Core Francisco 
-- Bell, Rianna         
-
-### Group E
-suggested topics: SDSS spectra (1), HSC convergence (3), Astro papers LLM (9)
-- Vargas-Magaña, Mariana
-- Dawid, Anna            
-- Ramachandra, Nesar    
-- Cooray, Suchetha      
-- Hidayat, Wildan       
-- Birky, Jessica        
-- Hilmi, Miftahul       
-
-### Group F
-suggested topics: Gaia (2), JWST images (4), SIMBIG (6)
-- Shi, Jingjing                  
-- Bayer, Adrian                  
-- Li, Jennifer                   
-- Porter, Fiona                  
-- Shi, Claudia                   
-- Yoon, Seongwhan                
-- Soler Matubaro de Santi, Natalí
-
-### Group G
-suggested topics: Gaia (2), HSC convergence (3), CAMELS multifield (7)
-- Huertas-Company, Marc         
-- McCabe, Michael               
-- Onoue, Masafusa               
-- Kumar Yadav, Sarvesh          
-- Thiele, Leander               
-- Henrique Mendes Duarte, Pedro 
-- Angeloudi, Eirini             
-
-### Group H
-suggested topics: HSC convergence (3), HSC images (5), SIMBIG (6)
-- Liu, Jia            
-- Bogatskiy, Alexander
-- Dan, Jiadong        
-- Medvidović, Matija  
-- Li, Chester         
-- Lahiry, Arnab       
-
-### Group J
-suggested topics: JWST images (4), SIMBIG (6), CAMELS multifield (7)
-- Li, Yin                 
-- Qiu, Tian               
-- Yuan, Sihan             
-- Wagner-Carena, Sebastian
-- Sampson, Matthew        
-- Chu, Jiani              
-- Breitman, Daniela       
-
-### Group K
-suggested topics: HSC convergence (3), SIMBIG (6), Astro papers LLM (9)
-- Nishizawa, Atsushi           
-- Cheung, Mark                 
-- Régaldo-Saint Blancard, Bruno
-- Scott, Bryan                 
-- James, Sunseri               
-- Quaglia, Giulio              
-- Aizawa, Kosuke               
-
-### Group L
-suggested topics: HSC convergence (3), JWST images (4), HSC images (5)
-- Nagamine, Kentaro
-- Leopoldo, Sarra  
-- Armijo, Joaquin  
-- Sharma, Ranbir   
-- Darwish, Omar    
-- Zhang, Xiaowen   
-- Hainje, Connor   
-
-### Group M
-suggested topics: SDSS spectra (1), JWST images (4), CAMELS multifield (7)
-- Moriwaki, Kana            
-- Parker, Liam              
-- Jost, Baptiste            
-- Lammers, Caleb            
-- Matthews, Alice           
-- Zhou, Alan Junzhe         
-- Gondhalekar, Yash Prashant
-
-### Group N
-suggested topics: SDSS spectra (1), HSC convergence (3), JWST images (4)
-- Zhao, Jingkun   
-- Terao, Kazuhiro 
-- Myles, Justin   
-- Halson, Marcus  
-- Hirashima, Keiya
-- Wan, Brian      
-
