@@ -29,6 +29,7 @@ You might want to use Google Colab and Google Drive to ease sharing data and cod
 * Planck CMB lensing maps, https://github.com/carronj/planck_PR4_lensing
 * DES Y3 data, https://des.ncsa.illinois.edu/
 * eRosita DR1, https://erosita.mpe.mpg.de/dr1/
+* ACT DR6, https://lambda.gsfc.nasa.gov/product/act/actadv_prod_table.html (see also https://github.com/ACTCollaboration/DR6_Notebooks)
 * DESI Early Data Release, https://data.desi.lbl.gov/doc/
 * Camels simulations, https://camels.readthedocs.io/en/latest/ 
 * Websky simulations, https://mocks.cita.utoronto.ca/data/websky/v0.0/
