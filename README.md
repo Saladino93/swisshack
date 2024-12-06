@@ -24,6 +24,7 @@ You might want to use Google Colab and Google Drive to ease sharing data and cod
 ### Data 
 
 * Preliminary Uchuu simulation (credits *Riccardo Seppi*), https://drive.proton.me/urls/YNNYYCCJ74#9XTtQrgJmRBo
+* Gravitational Waves data, https://gwosc.org/eventapi/
 * Planck Legacy Archive, https://pla.esac.esa.int/#home
 * Planck PR4 CMB maps, https://data.cmb-s4.org/planck_pr4.html
 * Planck CMB lensing maps, https://github.com/carronj/planck_PR4_lensing
